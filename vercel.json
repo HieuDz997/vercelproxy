@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "functions": {
+    "api/**/*.js": {
+      "memory": 128,
+      "maxDuration": 10
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/proxies/(.*)",
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8",
+        "Cache-Control": "public, max-age=120, s-maxage=120"
+      }
+    }
+  ]
+}
